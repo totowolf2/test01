@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grades</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+<body>
+  <h1>Student Grades</h1>
+  <table>
+    <tr>
+      <th>Student Name</th>
+      <th>Age</th>
+      <th>Score</th>
+      <th>Grade</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+      <td>{{ student[1] }}</td>
+      <td>{{ student[2] }}</td>
+      <td>{{ student[3] }}</td>
+      <td class="grade-{{ student[4] }}">{{ student[4] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <img src="{{ url_for('static', filename='images/Screen-Shot-2024-04-22-at-9.00.12-AM.webp')}}" width="100px">
+  <button type="button" onclick="go()">Click Me!</button>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

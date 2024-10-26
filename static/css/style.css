@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.grade-A {
+  background-color: #d4edda;
+}
+
+.grade-B {
+  background-color: #f8d7da;
+}
+
+.grade-C {
+  background-color: #fff3cd;
+}
+
+.grade-D .grade-F {
+  background-color: #f5c6cb;
+}
